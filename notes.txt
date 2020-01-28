@@ -1,0 +1,38 @@
+Based on section 3.2.2 in Michael's thesis:
+with most prominent features to be RMS of z-axis acc, STD of z-axis acc and FI of all 3 axes acc
+Window size of 100 required for FI to be accurate
+
+recall = sensitvity = true positive rate = TP/(TP + FN)
+precision = TP/(TP + FP)
+specificity = true negative rate = TN/(TN + FP)
+f1 score = 2TP/(2TP + FP + FN)
+
+Results using prediction from dump file and test data from excel (70% fog and non fog windows as training) :
+        precision   recall  f1-score   support
+
+non-FOG    0.80      0.96      0.87      1248
+ FOG       0.87      0.56      0.68       679
+
+ accuracy                      0.82      1927
+ macro avg 0.84      0.76      0.78      1927
+weighted avg 0.83      0.82      0.80      1927
+
+1583 fog train 2911 non-fog train
+----------------------------------------------------------------
+1583 fog windows
+1580 non fog windows
+3163 training windows (70%)
+1349 test windows (30%)
+              precision    recall  f1-score   support
+
+     non-FOG       0.82      0.86      0.84       670
+         FOG       0.86      0.81      0.83       679
+
+    accuracy                           0.84      1349
+   macro avg       0.84      0.84      0.84      1349
+weighted avg       0.84      0.84      0.84      1349
+
+- leave one out for every patient
+- individualised training
+
+
