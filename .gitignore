@@ -1,1 +1,5 @@
 lda.joblib
+lda_nonsliding.joblib
+lda_sliding.joblib
+notes.txt
+output.txt

@@ -2,7 +2,7 @@ from __future__ import division
 from sklearn.model_selection import train_test_split
 import math
 import numpy as np
-
+from sklearn.metrics import classification_report
 """
 ====================================================================
 Normal and Shrinkage Linear Discriminant Analysis for classification
@@ -134,13 +134,7 @@ def extract_rms(window, index):
 
     return math.sqrt(sum_of_squares)
 
-li = []
-li2 = [2, 4, 5]
-li3 = [6, 7, 8]
-li4 = [9, 10, 11]
-li.append(li2)
-li.append(li3)
-li.append(li4)
-li = li[0:2]
-print(li)
-# print(extract_rms(li, 0))
+y_true = [1, 2, 2, 2, 0]
+y_pred = [2, 2, 1, 0, 0]
+target_names = ['class 0', 'class 1', 'class 2']
+print(classification_report(y_true, y_pred, target_names=target_names))
